@@ -4,7 +4,7 @@ if _G.MainScriptLoaded then
 end
 _G.MainScriptLoaded = true
 
-local whitelist = { 2932844883, 2002271267, 7424122259 } 
+local whitelist = { 2932844883, 2002271267 } 
 
 local player = game.Players.LocalPlayer
 local playerId = player.UserId
@@ -42,7 +42,7 @@ local function safeLoad(url, name)
     return result
 end
 
-local mainScriptUrl = "https://raw.githubusercontent.com/azenbest/on-test/main/main.lua"
+local mainScriptUrl = "https://raw.githubusercontent.com/azenbest/owner-script/refs/heads/main/main.lua"
 local mainSuccess, mainResult = pcall(function()
     return loadstring(game:HttpGet(mainScriptUrl))()
 end)
